@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل القانون التجاري الشامل - موقع مفتوح للجميع</title>
+    <meta name="description" content="دليل شامل للقانون التجاري في 10 صفحات - موقع مجاني مفتوح للجميع للمشاركة والاستفادة">
+    <meta name="keywords" content="القانون التجاري, تجارة, تاجر, شركات, أوراق تجارية, قانون, مصر">
+    <meta name="author" content="ENG.JOSEF">
+    <meta property="og:title" content="دليل القانون التجاري الشامل">
+    <meta property="og:description" content="موقع شامل للقانون التجاري - مجاني ومفتوح للجميع">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0a2463;
+            --secondary-color: #3e5c76;
+            --accent-color: #ff9f1c;
+            --light-color: #f8f9fa;
+            --dark-color: #1d2d44;
+            --text-color: #333333;
+            --success-color: #2ecc71;
+            --border-radius: 10px;
+            --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', 'Noto Sans Arabic', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: #f5f7fb;
+            direction: rtl;
+            overflow-x: hidden;
+        }
+        
+        /* شريط التنقل العلوي */
+        .top-bar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 12px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .site-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .site-logo {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #ffbf69 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 20px;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .site-info h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .site-info p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .share-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 18px;
+        }
+        
+        .share-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+        
+        .main-container {
+            display: flex;
+            min-height: calc(100vh - 80px);
+        }
+        
+        /* الشريط الجانبي */
+        .sidebar {
+            width: 320px;
+            background: white;
+            padding: 25px 20px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow-y: auto;
+            height: calc(100vh - 80px);
+            position: sticky;
+            top: 80px;
+        }
+        
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #ffbf69 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(255, 159, 28, 0.3);
+            border: 3px solid white;
+        }
+        
+        .logo-inner {
+            font-size: 36px;
+            font-weight: 900;
+            color: white;
+            letter-spacing: -3px;
+        }
+        
+        .sidebar-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .sidebar-subtitle {
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-weight: 400;
+        }
+        
+        /* شريط البحث */
+        .search-container {
+            margin-bottom: 25px;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 14px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            transition: var(--transition);
+            background-color: #f9f9f9;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(255, 159, 28, 0.1);
+        }
+        
+        .search-results {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            margin-top: 10px;
+            border: 1px solid #eee;
+        }
+        
+        .search-result-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .search-result-item:hover {
+            background-color: rgba(10, 36, 99, 0.05);
+        }
+        
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+        
+        .nav-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .nav-list li {
+            margin-bottom: 8px;
+        }
+        
+        .nav-list a {
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 14px 15px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            font-weight: 500;
+            background-color: #f9f9f9;
+            border-right: 4px solid transparent;
+        }
+        
+        .nav-list a:hover, .nav-list a.active {
+            background-color: rgba(10, 36, 99, 0.08);
+            color: var(--primary-color);
+            border-right-color: var(--accent-color);
+            transform: translateX(-5px);
+        }
+        
+        .nav-icon {
+            margin-left: 12px;
+            font-size: 16px;
+            color: var(--accent-color);
+        }
+        
+        .page-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background-color: rgba(255, 159, 28, 0.15);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--accent-color);
+        }
+        
+        .nav-text {
+            flex: 1;
+            font-size: 15px;
+        }
+        
+        .sidebar-footer {
+            background-color: rgba(10, 36, 99, 0.05);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .download-btn {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            transition: var(--transition);
+            width: 100%;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(10, 36, 99, 0.2);
+        }
+        
+        .free-access {
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        .free-access i {
+            color: var(--success-color);
+            margin-left: 5px;
+        }
+        
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+        
+        .welcome-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .welcome-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .welcome-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .welcome-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .welcome-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .welcome-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+        
+        .welcome-btn.primary {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .welcome-btn.primary:hover {
+            background: #ff8c00;
+        }
+        
+        .page {
+            display: none;
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            animation: fadeIn 0.8s ease;
+            border-top: 5px solid var(--accent-color);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        .page-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .page-logo {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 25px;
+            box-shadow: 0 5px 15px rgba(10, 36, 99, 0.15);
+            border: 2px solid white;
+        }
+        
+        .page-logo-text {
+            font-size: 28px;
+            font-weight: 900;
+            color: white;
+            letter-spacing: -2px;
+        }
+        
+        .page-title {
+            flex: 1;
+        }
+        
+        .page-title h1 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+        
+        .page-title .page-num {
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 18px;
+            background-color: rgba(255, 159, 28, 0.1);
+            padding: 5px 15px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        
+        .page-content {
+            line-height: 1.9;
+            font-size: 18px;
+            color: #444;
+        }
+        
+        .page-content p {
+            margin-bottom: 22px;
+            text-align: justify;
+            font-weight: 400;
+        }
+        
+        .page-content h3 {
+            color: var(--primary-color);
+            margin: 30px 0 18px;
+            padding-right: 15px;
+            border-right: 4px solid var(--accent-color);
+            font-weight: 700;
+            font-size: 22px;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 159, 28, 0.08);
+            padding: 22px;
+            border-right: 4px solid var(--accent-color);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            margin: 25px 0;
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--dark-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .page-footer {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid #eaeaea;
+            text-align: center;
+            font-style: italic;
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 16px;
+            background-color: rgba(10, 36, 99, 0.03);
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+        
+        .page-share {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .page-share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .page-share-btn.facebook { background-color: #3b5998; }
+        .page-share-btn.twitter { background-color: #1da1f2; }
+        .page-share-btn.whatsapp { background-color: #25d366; }
+        .page-share-btn.link { background-color: var(--primary-color); }
+        
+        .page-share-btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .nav-btn {
+            background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(10, 36, 99, 0.2);
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(10, 36, 99, 0.3);
+        }
+        
+        .nav-btn i {
+            margin: 0 8px;
+            font-size: 18px;
+        }
+        
+        .nav-btn.prev i {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+        
+        /* تصميم للهواتف */
+        @media (max-width: 1200px) {
+            .sidebar {
+                width: 300px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .main-container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+            }
+            
+            .top-bar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .welcome-buttons {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 20px;
+            }
+            
+            .page {
+                padding: 25px;
+            }
+            
+            .page-title h1 {
+                font-size: 24px;
+            }
+            
+            .nav-btn {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .page-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .page-logo {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+            
+            .welcome-section {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .site-title {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .share-buttons {
+                justify-content: center;
+            }
+            
+            .welcome-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        /* شريط التمرير */
+        .sidebar::-webkit-scrollbar,
+        .search-results::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track,
+        .search-results::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb,
+        .search-results::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <div class="top-bar">
+        <div class="site-title">
+            <div class="site-logo">YA</div>
+            <div class="site-info">
+                <h1>دليل القانون التجاري الشامل</h1>
+                <p>موقع مجاني مفتوح للجميع - شاركه مع أصدقائك</p>
+            </div>
+        </div>
+        
+        <div class="share-buttons">
+            <button class="share-btn" onclick="shareOnFacebook()">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+            <button class="share-btn" onclick="shareOnTwitter()">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="share-btn" onclick="shareOnWhatsApp()">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+            <button class="share-btn" onclick="copyLink()">
+                <i class="fas fa-link"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="main-container">
+        <!-- الشريط الجانبي -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo">
+                        <div class="logo-inner">YA</div>
+                    </div>
+                </div>
+                <h2 class="sidebar-title">القانون التجاري</h2>
+                <p class="sidebar-subtitle">دليل شامل في 10 صفحات</p>
+            </div>
+            
+            <!-- شريط البحث -->
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="ابحث في المحتوى..." id="searchInput">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            
+            <!-- قائمة التنقل -->
+            <ul class="nav-list" id="navList">
+                <!-- سيتم تعبئة الروابط عبر JavaScript -->
+            </ul>
+            
+            <!-- قسم التحميل والمشاركة -->
+            <div class="sidebar-footer">
+                <button class="download-btn" onclick="downloadAsPDF()">
+                    <i class="fas fa-download"></i> تحميل كملف PDF
+                </button>
+                <p class="free-access">
+                    <i class="fas fa-unlock-alt"></i> هذا الموقع مجاني ومفتوح للجميع
+                </p>
+            </div>
+        </div>
+        
+        <!-- المحتوى -->
+        <div class="main-content" id="mainContent">
+            <!-- قسم الترحيب -->
+            <div class="welcome-section" id="welcomeSection">
+                <h2>مرحباً بك في دليل القانون التجاري الشامل</h2>
+                <p>هذا موقع تعليمي مجاني بالكامل يحتوي على شرح شامل للقانون التجاري في 10 صفحات. يمكنك تصفح المحتوى، مشاركته مع الآخرين، أو حتى تحميله كملف PDF.</p>
+                <p>المصدر مفتوح ويمكن لأي شخص استخدامه، مشاركته، أو استضافته على موقعه الخاص.</p>
+                
+                <div class="welcome-buttons">
+                    <button class="welcome-btn primary" onclick="showPage(1)">
+                        <i class="fas fa-book-open"></i> ابدأ القراءة
+                    </button>
+                    <button class="welcome-btn" onclick="showShareModal()">
+                        <i class="fas fa-share-alt"></i> شارك الموقع
+                    </button>
+                    <button class="welcome-btn" onclick="copySourceCode()">
+                        <i class="fas fa-code"></i> نسخ كود المصدر
+                    </button>
+                </div>
+            </div>
+            
+            <!-- الصفحات سيتم إضافتها هنا عبر JavaScript -->
+        </div>
+    </div>
+
+    <!-- نافذة المشاركة -->
+    <div id="shareModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 2000; align-items: center; justify-content: center;">
+        <div style="background: white; padding: 30px; border-radius: var(--border-radius); max-width: 500px; width: 90%;">
+            <h2 style="color: var(--primary-color); margin-bottom: 20px;">مشاركة الموقع</h2>
+            <p style="margin-bottom: 25px;">شارك هذا الموقع التعليمي المجاني مع الآخرين:</p>
+            
+            <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 30px;">
+                <button class="page-share-btn facebook" onclick="shareOnFacebook()">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="page-share-btn twitter" onclick="shareOnTwitter()">
+                    <i class="fab fa-twitter"></i>
+                </button>
+                <button class="page-share-btn whatsapp" onclick="shareOnWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+                <button class="page-share-btn link" onclick="copyLink()">
+                    <i class="fas fa-link"></i>
+                </button>
+            </div>
+            
+            <div style="margin-bottom: 25px;">
+                <p style="font-weight: bold; margin-bottom: 10px;">رابط الموقع:</p>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="siteLink" value="https://example.com/law-guide" style="flex: 1; padding: 12px; border: 2px solid #ddd; border-radius: var(--border-radius);" readonly>
+                    <button onclick="copyLink()" style="background: var(--primary-color); color: white; border: none; padding: 0 20px; border-radius: var(--border-radius); cursor: pointer;">نسخ</button>
+                </div>
+            </div>
+            
+            <button onclick="hideShareModal()" style="background: #ddd; color: #333; border: none; padding: 12px 25px; border-radius: var(--border-radius); cursor: pointer; width: 100%;">إغلاق</button>
+        </div>
+    </div>
+
+    <script>
+        // بيانات الصفحات
+        const pages = [
+            {
+                id: 1,
+                title: "مدخل شامل إلى القانون التجاري (النشأة والخصائص)",
+                content: `
+                    <p>القانون التجاري هو ذلك الفرع من فروع القانون الخاص الذي ينظم فئة معينة من الأعمال تسمى الأعمال التجارية، ويحكم فئة معينة من الأشخاص يطلق عليهم التجار. إن الحاجة إلى وجود قانون تجاري مستقل عن القانون المدني نبعت من طبيعة الحياة التجارية التي تختلف جذرياً عن المعاملات المدنية.</p>
+                    
+                    <div class="highlight">
+                        تتميز التجارة بضرورة السرعة؛ فالتجار يبرمون عشرات الصفقات يومياً، ولا يمكنهم الانتظار لإجراءات التسجيل والتوثيق المعقدة المطلوبة في البيوع المدنية (مثل بيع العقارات). لذا، اعتمد القانون التجاري مبدأ البساطة والبعد عن التعقيد الشكلي.
+                    </div>
+                    
+                    <h3>خاصية الائتمان</h3>
+                    <p>الخاصية الثانية الجوهرية هي الائتمان. التاجر يحتاج دائماً إلى "الأجل" (الائتمان) لشراء بضائعه وسداد ثمنها بعد بيعها، وهذا يعتمد كلياً على الثقة المتبادلة. ولحماية هذا الائتمان، وضع القانون قواعد صارمة مثل "التضامن المفترض بين المدينين" ونظام "الإفلاس".</p>
+                    
+                    <h3>مصادر القانون التجاري</h3>
+                    <p>أما عن مصادر القانون التجاري، فيأتي التشريع (قانون التجارة المصري) كأول مصدر ملزم للقاضي. وإذا لم يجد القاضي نصاً تشريعياً، فإنه يلجأ إلى العرف التجاري، وهو ما استقر عليه التجار من قواعد سلوكية معينة وشاع الاعتقاد بإلزاميتها.</p>
+                    <p>ويعد العرف في التجارة أقوى منه في المدني لقدرته على التطور السريع. ثم تأتي المصادر التفسيرية كأحكام القضاء (السوابق القضائية) والفقه (آراء العلماء)، والتي تساعد في فهم وتفسير النصوص الغامضة وتطويعها لتناسب المستجدات التكنولوجية الحديثة كالتجارة الإلكترونية.</p>
+                `
+            },
+            {
+                id: 2,
+                title: "معايير التفرقة والبحث في الأعمال التجارية المنفردة",
+                content: `
+                    <p>لا يطبق القانون التجاري على كل فعل، بل يجب أن يكون الفعل "تجارياً". وقد وضع الفقهاء أربعة معايير للتمييز: معيار المضاربة (الهدف هو الربح المادي)، معيار التداول (تحريك السلع من المنتج للمستهلك)، معيار المشروع (العمل من خلال تنظيم ومقر)، ومعيار الحرفة.</p>
+                    
+                    <div class="highlight">
+                        وبناءً على ذلك، قسم القانون الأعمال التجارية إلى عدة أنواع، أولها الأعمال التجارية المنفردة. هذه الأعمال تعتبر تجارية حتى لو قام بها الشخص مرة واحدة في حياته، ولا يشترط فيها الاحتراف.
+                    </div>
+                    
+                    <h3>أهم صور الأعمال التجارية المنفردة</h3>
+                    <p><strong>الشراء لأجل البيع أو التأجير:</strong> وهو أكثر الأعمال شيوعاً، ويشترط فيه أن يكون هناك شراء فعلي (وليس إرثاً)، وأن ينصب على "منقول" (بضائع، سيارات، ذهب)، وأن يتوافر قصد تحقيق الربح وقت الشراء.</p>
+                    <p><strong>أعمال الملاحة البحرية والجوية:</strong> نظراً للمخاطر الضخمة ورؤوس الأموال الكبيرة، اعتبر القانون كل ما يتعلق ببناء أو شراء أو بيع أو استئجار السفن والطائرات عملاً تجارياً، وكذلك عقود استخدام الملاحين والطيارين وعقود النقل البحري والجوي.</p>
+                    <p><strong>تأسيس الشركات:</strong> إن عملية تكوين الشركة، من إعداد عقد التأسيس والإشهار، تعتبر عملاً تجارياً في حد ذاتها، بغض النظر عما إذا كان غرض الشركة تجارياً أم مدنياً (مثل شركات المحاماة)، وذلك لأن عملية التأسيس هي حجر الزاوية في النشاط الاقتصادي المنظم.</p>
+                `
+            },
+            {
+                id: 3,
+                title: "نظرية الاحتراف ومقاولات الأنشطة الخدمية والمالية",
+                content: `
+                    <p>النوع الثاني من الأعمال هو الأعمال التجارية بطريق الاحتراف (أو المقاولة). هنا، لا يكفي القيام بالعمل مرة واحدة، بل يجب ممارسته على وجه التكرار والاستمرار من خلال مشروع منظم. الاحتراف يعني اتخاذ العمل مهنة يعتمد عليها الشخص في رزقه.</p>
+                    
+                    <div class="highlight">
+                        لقد حدد القانون المصري (المادة 5) قائمة طويلة من هذه الأعمال، والتي تشكل هيكل الاقتصاد القومي الحديث، وتخضع بالكامل لقانون التجارة من حيث الإثبات والضرائب والالتزامات.
+                    </div>
+                    
+                    <h3>أهم الأعمال التجارية بطريق الاحتراف</h3>
+                    <p><strong>الصناعة:</strong> وهي تحويل المواد الأولية إلى سلع نصف مصنعة أو تامة الصنع.</p>
+                    <p><strong>التوريد:</strong> وهو التزام بتسليم بضائع أو تقديم خدمات بصفة دورية (مثل توريد الأغذية للمستشفيات).</p>
+                    <p><strong>الوكالة بالعمولة والسمسرة:</strong> وهم الوسطاء الذين يسهلون إبرام الصفقات مقابل أجر.</p>
+                    <p><strong>عمليات البنوك والصرافة:</strong> كل أنشطة البنوك من إيداع وقرض وتغيير عملات هي أعمال تجارية محترفة.</p>
+                    <p><strong>التأمين:</strong> بكافة أنواعه (التأمين على الحياة، الحريق، الحوادث).</p>
+                    <p><strong>أعمال الدور والنشر والاتصالات:</strong> تشمل الطباعة، الصحافة، الإذاعة، والبث الفضائي.</p>
+                    <p><strong>التكنولوجيا الحديثة:</strong> دخلت في هذا النطاق حديثاً عمليات الاستغلال التجاري لبرامج الحاسب الآلي وتطبيقات الهواتف.</p>
+                    
+                    <p>كل هذه الأنشطة تتطلب "مقاولاً" يدير المشروع ويتحمل مخاطره، وهي التي تشكل هيكل الاقتصاد القومي الحديث.</p>
+                `
+            },
+            {
+                id: 4,
+                title: "الأعمال التجارية بالتبعية والعمليات المختلطة",
+                content: `
+                    <p>تظهر عبقرية القانون التجاري في نظرية التبعية. فحواها أن هناك أعمالاً هي في أصلها "مدنية" (كشراء أثاث لمكتب)، ولكنها تتحول إلى "تجارية" لأن التاجر قام بها من أجل شؤون تجارته. القاعدة هي: "الفرع يتبع الأصل".</p>
+                    
+                    <h3>التبعية الشخصية والموضوعية</h3>
+                    <p><strong>التبعية الشخصية:</strong> يشترط فيها أن يكتسب القائم بالعمل صفة التاجر، وأن يكون العمل مرتبطاً بحرفته. وضع القانون قرينة (افتراضاً) أن كل عقود التاجر تجارية حتى يثبت هو عكس ذلك.</p>
+                    <p><strong>التبعية الموضوعية:</strong> وتتحقق عند ارتباط عمل مدني بعمل تجاري أصلي (مثل كفالة شخص لآخر في دين تجاري).</p>
+                    
+                    <div class="highlight">
+                        أما الأعمال المختلطة، فهي التي تجمع طرفين: أحدهما يمارس عملاً تجارياً والآخر يمارس عملاً مدنياً. مثال ذلك: شراء مواطن (مدني) لجهاز كهربائي من متجر (تاجر).
+                    </div>
+                    
+                    <h3>تطبيق القانون على الأعمال المختلطة</h3>
+                    <p>من حيث الاختصاص القضائي: يرفع المدني دعواه ضد التاجر أمام القضاء التجاري، بينما يضطر التاجر لرفع دعواه ضد المدني أمام القضاء المدني.</p>
+                    <p>من حيث الإثبات: يتمتع المدني بحرية الإثبات ضد التاجر (لأن العمل تجاري للتاجر)، بينما يتقيد التاجر بقواعد الإثبات المدنية (الكتابة) ضد المدني إذا تجاوزت القيمة حداً معيناً.</p>
+                    <p>هذا التوازن يهدف لحماية "الطرف الضعيف" وهو المستهلك المدني من هيمنة التاجر المحترف.</p>
+                `
+            },
+            {
+                id: 5,
+                title: "التاجر (شروط الاكتساب، الأهلية، والمركز القانوني)",
+                content: `
+                    <p>التاجر هو الشخص الذي يكرس حياته المهنية للعمل التجاري. ولاكتساب هذه الصفة، وضع القانون أربعة شروط متراكمة:</p>
+                    
+                    <p><strong>مباشرة الأعمال التجارية:</strong> يجب أن يكون النشاط الذي يمارسه ضمن قائمة الأعمال التجارية (منفردة أو مقاولة).</p>
+                    <p><strong>الاحتراف:</strong> وهو الاستمرار والتكرار. الشخص الذي يبيع سيارته الشخصية لمرة واحدة ليس تاجراً، ولكن من يشتري السيارات ويبيعها كل أسبوع هو تاجر.</p>
+                    <p><strong>الاستقلال (العمل لحساب الخاص):</strong> هذا هو أدق الشروط. يجب أن يتحمل التاجر مخاطر الربح والخسارة. لذا، فإن "موظف البنك" أو "عامل المتجر" ليس تاجراً مهما كبرت صفقاته، لأنه يعمل لحساب غيره وبعلاقة تبعية.</p>
+                    <p><strong>الأهلية التجارية:</strong> يجب أن يكون الشخص بالغاً من العمر 21 سنة ميلادية كاملة، وألا يكون مصاباً بعارض من عوارض الأهلية (جنون، عته).</p>
+                    
+                    <h3>المرأة في التجارة</h3>
+                    <p>القانون المصري ساوى بين الرجل والمرأة؛ فللمرأة الحق الكامل في ممارسة التجارة متى بلغت سن الرشد، وتكون ذمتها المالية مستقلة تماماً عن زوجها.</p>
+                    
+                    <div class="highlight">
+                        <strong>التاجر المستتر:</strong> هو شخص يمارس التجارة من وراء شخص آخر (صوري) ليهرب من منع قانوني (مثل الموظف العام). هنا يعتبر "المستتر" تاجراً ويخضع لكافة الالتزامات كنوع من الجزاء، بينما يعتبر "الظاهر" تاجراً أيضاً حماية لحقوق الغير الذين تعاملوا معه.
+                    </div>
+                `
+            },
+            {
+                id: 6,
+                title: "الالتزامات المهنية (الدفاتر التجارية وإدارة النشاط)",
+                content: `
+                    <p>بمجرد اكتساب الشخص لصفة التاجر، يفرض عليه القانون مجموعة من الواجبات التي تهدف لتنظيم المهنة وحماية الغير. أهم هذه الالتزامات هي مسك الدفاتر التجارية.</p>
+                    
+                    <div class="highlight">
+                        الدفاتر ليست مجرد أوراق، بل هي "مرآة" تعكس الوضع المالي الحقيقي للمشروع. ألزم القانون كل تاجر يتجاوز رأس ماله حداً معيناً بمسك دفترين أساسيين.
+                    </div>
+                    
+                    <h3>أنواع الدفاتر التجارية الأساسية</h3>
+                    <p><strong>دفتر اليومية:</strong> وهو الدفتر "الأول" الذي تقيد فيه جميع العمليات المالية (بيع، شراء، قبض، صرف) يوماً بيوم.</p>
+                    <p><strong>دفتر الجرد:</strong> ويعد في نهاية السنة المالية، ويتضمن تفاصيل البضاعة الموجودة بالمخازن، والميزانية العمومية، وحساب الأرباح والخسائر.</p>
+                    
+                    <h3>قواعد تنظيم الدفاتر</h3>
+                    <p>لكي تكون الدفاتر حجة أمام القضاء، يجب أن تكون منتظمة (خالية من الفراغات، الكشط، أو الكتابة في الهوامش). ويجب ترقيم صفحاتها وختمها من مكتب السجل التجاري.</p>
+                    
+                    <h3>الأهمية القانونية للدفاتر</h3>
+                    <p>الدفاتر المنتظمة تحمي التاجر في حالتين: أولاً، تعتبر وسيلة إثبات لصالحه ضد تاجر آخر. ثانياً، في حال تعثره ووصوله للإفلاس، إذا كانت دفاتره منتظمة، يعتبر "مفلساً حسن النية" ويستحق مزايا الصلح الواقي، أما إذا كانت مهملة أو مخفاة، فيعتبر "متفالساً بالتقصير أو التدليس" وتطبق عليه عقوبات جنائية شديدة تصل للحبس.</p>
+                `
+            },
+            {
+                id: 7,
+                title: "السجل التجاري (التنظيم، الإجراءات، والآثار القانونية)",
+                content: `
+                    <p>السجل التجاري هو نظام إشهاري يهدف لجمع المعلومات الدقيقة عن التجار والشركات ووضعها تحت تصرف الدولة والجمهور. هو بمثابة "شهادة ميلاد" للمشروع التجاري.</p>
+                    
+                    <h3>من يلتزم بالقيد؟</h3>
+                    <p>الأفراد الذين يكتسبون صفة التاجر، والشركات التجارية، والجمعيات التعاونية التي تزاول نشاطاً تجارياً، وأفرع الشركات الأجنبية في مصر.</p>
+                    
+                    <h3>شروط القيد</h3>
+                    <p><strong>أن يكون طالب القيد تاجراً فعلياً.</strong></p>
+                    <p><strong>الجنسية:</strong> الأصل هو الجنسية المصرية، ولكن سمح القانون للأجانب بالقيد إذا وافقت هيئة الاستثمار، أو إذا كان الأجنبي شريكاً في شركة أشخاص بنسبة تقل عن 49% (أو وفقاً للضوابط المعمول بها لضمان السيادة الاقتصادية).</p>
+                    <p><strong>المكان:</strong> يجب أن يكون للتاجر محل رئيسي أو فرع في دائرة مكتب السجل.</p>
+                    
+                    <div class="highlight">
+                        <strong>الآثار المترتبة على القيد:</strong> بمجرد القيد، يكتسب التاجر حق كتابة رقم سجله على مراسلاته ولوحاته، وتعتبر البيانات المسجلة حجة في مواجهة الغير.
+                    </div>
+                    
+                    <p>كما يلتزم التاجر بتحديث بياناته (تعديل القيد) خلال شهر من أي تغيير يطرأ، ويجب "محو القيد" في حالة الوفاة أو التوقف النهائي عن التجارة. السجل التجاري ليس مجرد إجراء روتيني، بل هو أداة لضمان الشفافية في المعاملات المالية والاقتصادية للدولة.</p>
+                `
+            },
+            {
+                id: 8,
+                title: "عالم الأوراق التجارية (الكمبيالة، الشيك، والسند)",
+                content: `
+                    <p>الأوراق التجارية هي العمود الفقري للائتمان التجاري. هي صكوك مكتوبة قابلة للتداول تمثل حقاً بمبلغ من النقود. تختلف عن "الأوراق المالية" (الأسهم والسندات) بأنها قصيرة الأجل وتستخدم للوفاء بالديون.</p>
+                    
+                    <div class="highlight">
+                        تتميز الأوراق التجارية بخصائص فريدة: الكفاية الذاتية (كل الحقوق واضحة في الورقة نفسها)، استقلال التوقيعات (كل موقع مسؤول عن وفاء الورقة)، والتطهير من الدفوع (لا ينتقل العيب من شخص لآخر عند تداولها).
+                    </div>
+                    
+                    <h3>أنواع الأوراق التجارية الرئيسية</h3>
+                    <p><strong>الكمبيالة:</strong> هي أمر من "الساحب" إلى "المسحوب عليه" بدفع مبلغ لـ "المستفيد". هي أداة ائتمان بامتياز لأنها تتضمن تاريخ استحقاق مستقبلي.</p>
+                    <p><strong>الشيك:</strong> هو أداة وفاء "فورية". الساحب يطلب من "البنك" دفع مبلغ للمستفيد. الفرق الجوهري أن الشيك لا يعرف "الأجل"؛ فهو مستحق الدفع بمجرد أن يراه البنك. لذا، إصدار شيك بدون رصيد هو جريمة جنائية فورية.</p>
+                    <p><strong>السند الإذني:</strong> هو تعهد مباشر من المدين للدائن (طرفين فقط). يكتب فيه المدين: "أتعهد بأن أدفع لأمر فلان مبلغ كذا..".</p>
+                    
+                    <p>تنتقل هذه الأوراق عن طريق التظهير (التوقيع على ظهر الورقة)، مما يجعلها "نقوداً تجارية" تسهل حركة التجارة دون الحاجة لنقل الأموال السائلة والمخاطرة بضياعها.</p>
+                `
+            },
+            {
+                id: 9,
+                title: "المحل التجاري (عناصر الثروة المعنوية وحمايتها)",
+                content: `
+                    <p>المحل التجاري ليس هو الجدران أو العقار، بل هو "مجموعة من الأموال المنقولة" المخصصة للاستغلال التجاري. المحل هو كيان معنوي مستقل.</p>
+                    
+                    <h3>مكونات المحل التجاري</h3>
+                    <p><strong>العناصر المادية:</strong> البضائع (السلع الجاهزة) والمهمات (الآلات، الأثاث، أجهزة الحاسب).</p>
+                    <p><strong>العناصر المعنوية (وهي الأهم):</strong></p>
+                    <p><strong>الاتصال بالعملاء والشهرة:</strong> هي جوهر المحل، وبدونها لا يوجد محل تجاري. هي قدرة المحل على جذب الزبائن بسبب جودته أو موقعه.</p>
+                    <p><strong>الاسم التجاري:</strong> الاسم الذي يشتهر به التاجر ويميزه عن منافسيه.</p>
+                    <p><strong>الحق في الإيجار:</strong> حق التاجر في البقاء في المكان لمزاولة نشاطه، وهو عنصر له قيمة مالية كبيرة.</p>
+                    <p><strong>حقوق الملكية الصناعية:</strong> مثل العلامات التجارية (Logos) وبراءات الاختراع.</p>
+                    
+                    <div class="highlight">
+                        <strong>الطبيعة القانونية:</strong> الراجح أنها "ملكية معنوية". حق التاجر على محله ليس ملكية مادية بل هو حق استئثار واستغلال.
+                    </div>
+                    
+                    <h3>حماية المحل التجاري</h3>
+                    <p>يحمي القانون المحل التجاري عن طريق "دعوى المنافسة غير المشروعة". فإذا قام منافس بتقليد الاسم أو العلامة أو تضليل العملاء، يحق للتاجر مطالبته بالتعويض ووقف هذا النشاط فوراً.</p>
+                    <p>المحل التجاري يمثل قيمة مالية ضخمة يمكن بيعها أو رهنها للحصول على قروض بنكية.</p>
+                `
+            },
+            {
+                id: 10,
+                title: "الشركات التجارية (التنظيم القانوني وأنواع الكيانات)",
+                content: `
+                    <p>ختام المنهج هو الشركات، وهي المرحلة الأكثر تطوراً في العمل التجاري. الشركة هي عقد يلتزم بمقتضاه شخصان أو أكثر بالمساهمة في مشروع مالي بتقديم حصة (مالية أو عمل) لاقتسام الربح والخسارة.</p>
+                    
+                    <div class="highlight">
+                        تتمتع الشركة بـ <strong>الشخصية المعنوية</strong>، أي أنها تصبح شخصاً قانونياً مستقلاً عن أصحابها، لها اسمها وذمتها المالية المستقلة.
+                    </div>
+                    
+                    <h3>أنواع الشركات التجارية الرئيسية</h3>
+                    <p><strong>شركات الأشخاص:</strong> تقوم على الثقة المتبادلة بين الشركاء.</p>
+                    <p><strong>شركة التضامن:</strong> الشركاء فيها يسألون عن ديون الشركة في أموالهم الخاصة (مسؤولية تضامنية ومطلقة).</p>
+                    <p><strong>شركة التوصية البسيطة:</strong> تضم شركاء متضامنين (مدراء) وشركاء موصين (ممولين فقط لا يسألون إلا بحدود حصتهم).</p>
+                    
+                    <p><strong>شركات الأموال:</strong> الاعتبار فيها للمال وليس للأشخاص.</p>
+                    <p><strong>شركة المساهمة:</strong> يقسم رأس مالها لأسهم متساوية القيمة وتتداول في البورصة. المسؤولية فيها محدودة جداً بقيمة الأسهم.</p>
+                    
+                    <p><strong>الشركات المختلطة:</strong></p>
+                    <p><strong>الشركة ذات المسؤولية المحدودة:</strong> وهي المفضلة للمشروعات المتوسطة، حيث لا يتجاوز عدد الشركاء 50 شريكاً، وتجمع بين بساطة شركات الأشخاص وأمان شركات الأموال.</p>
+                    
+                    <p>إن فهم أنواع الشركات يساعد التاجر في اختيار الكيان القانوني المناسب الذي يحمي ثروته الشخصية من مخاطر التجارة ويضمن استمرارية المشروع حتى بعد وفاة أحد الشركاء.</p>
+                `
+            }
+        ];
+
+        // دالة لإنشاء الشريط الجانبي
+        function createSidebar() {
+            const navList = document.getElementById('navList');
+            
+            pages.forEach(page => {
+                const listItem = document.createElement('li');
+                const shortTitle = page.title.length > 50 ? page.title.substring(0, 50) + "..." : page.title;
+                
+                listItem.innerHTML = `
+                    <a href="#" data-page="${page.id}" class="${page.id === 1 ? 'active' : ''}">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <span class="nav-text">${shortTitle}</span>
+                        <span class="page-number">${page.id}</span>
+                    </a>
+                `;
+                navList.appendChild(listItem);
+            });
+            
+            // إضافة مستمعي الأحداث للروابط
+            document.querySelectorAll('.nav-list a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = parseInt(this.getAttribute('data-page'));
+                    showPage(pageId);
+                    
+                    // تحديث الروابط النشطة
+                    document.querySelectorAll('.nav-list a').forEach(a => a.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        }
+
+        // دالة لإنشاء الصفحات
+        function createPages() {
+            const mainContent = document.getElementById('mainContent');
+            
+            pages.forEach(page => {
+                const pageElement = document.createElement('div');
+                pageElement.className = `page`;
+                pageElement.id = `page-${page.id}`;
+                
+                pageElement.innerHTML = `
+                    <div class="page-header">
+                        <div class="page-logo">
+                            <div class="page-logo-text">YA</div>
+                        </div>
+                        <div class="page-title">
+                            <h1>${page.title}</h1>
+                            <div class="page-num">الصفحة ${page.id}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="page-content">
+                        ${page.content}
+                    </div>
+                    
+                    <div class="page-footer">
+                        <div>تم التصميم بواسطة : ENG.JOSEF</div>
+                        <div class="page-share">
+                            <div class="page-share-btn facebook" onclick="shareOnFacebook()">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="page-share-btn twitter" onclick="shareOnTwitter()">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="page-share-btn whatsapp" onclick="shareOnWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="page-share-btn link" onclick="copyLink()">
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        ${page.id > 1 ? `
+                            <button class="nav-btn prev" onclick="showPage(${page.id - 1})">
+                                <i class="fas fa-arrow-right"></i> الصفحة السابقة
+                            </button>
+                        ` : '<div></div>'}
+                        
+                        ${page.id < pages.length ? `
+                            <button class="nav-btn next" onclick="showPage(${page.id + 1})">
+                                الصفحة التالية <i class="fas fa-arrow-left"></i>
+                            </button>
+                        ` : ''}
+                    </div>
+                `;
+                
+                mainContent.appendChild(pageElement);
+            });
+        }
+
+        // دالة لإظهار صفحة محددة
+        function showPage(pageId) {
+            // إخفاء قسم الترحيب
+            document.getElementById('welcomeSection').style.display = 'none';
+            
+            // إخفاء جميع الصفحات
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // إظهار الصفحة المطلوبة
+            document.getElementById(`page-${pageId}`).classList.add('active');
+            
+            // تحديث الروابط النشطة في الشريط الجانبي
+            document.querySelectorAll('.nav-list a').forEach(a => a.classList.remove('active'));
+            document.querySelector(`.nav-list a[data-page="${pageId}"]`).classList.add('active');
+            
+            // التمرير إلى أعلى الصفحة
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // دالة البحث
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const searchResults = document.getElementById('searchResults');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.trim().toLowerCase();
+                
+                if (searchTerm.length < 2) {
+                    searchResults.style.display = 'none';
+                    return;
+                }
+                
+                const results = [];
+                
+                pages.forEach(page => {
+                    // البحث في العنوان
+                    if (page.title.toLowerCase().includes(searchTerm)) {
+                        results.push({
+                            pageId: page.id,
+                            text: page.title,
+                            type: 'title'
+                        });
+                    }
+                    
+                    // البحث في المحتوى
+                    const content = page.content.replace(/<[^>]*>/g, '');
+                    if (content.toLowerCase().includes(searchTerm)) {
+                        const startIndex = content.toLowerCase().indexOf(searchTerm);
+                        const context = content.substring(Math.max(0, startIndex - 50), Math.min(content.length, startIndex + 100));
+                        
+                        results.push({
+                            pageId: page.id,
+                            text: `...${context}...`,
+                            type: 'content'
+                        });
+                    }
+                });
+                
+                // عرض النتائج
+                if (results.length > 0) {
+                    searchResults.innerHTML = '';
+                    results.slice(0, 10).forEach(result => {
+                        const resultItem = document.createElement('div');
+                        resultItem.className = 'search-result-item';
+                        resultItem.innerHTML = `
+                            <div style="font-weight: bold; color: var(--primary-color);">الصفحة ${result.pageId}</div>
+                            <div style="font-size: 14px; margin-top: 5px;">${result.text}</div>
+                        `;
+                        
+                        resultItem.addEventListener('click', function() {
+                            showPage(result.pageId);
+                            searchInput.value = '';
+                            searchResults.style.display = 'none';
+                        });
+                        
+                        searchResults.appendChild(resultItem);
+                    });
+                    
+                    searchResults.style.display = 'block';
+                } else {
+                    searchResults.innerHTML = '<div class="search-result-item">لا توجد نتائج</div>';
+                    searchResults.style.display = 'block';
+                }
+            });
+            
+            // إغلاق نتائج البحث عند النقر خارج
+            document.addEventListener('click', function(e) {
+                if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                    searchResults.style.display = 'none';
+                }
+            });
+        }
+
+        // وظائف المشاركة
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("دليل القانون التجاري الشامل - موقع مجاني مفتوح للجميع");
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank');
+        }
+        
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("دليل القانون التجاري الشامل - موقع مجاني مفتوح للجميع");
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        
+        function shareOnWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("دليل القانون التجاري الشامل - موقع مجاني مفتوح للجميع");
+            window.open(`https://api.whatsapp.com/send?text=${text}%20${url}`, '_blank');
+        }
+        
+        function copyLink() {
+            const link = window.location.href;
+            navigator.clipboard.writeText(link).then(() => {
+                alert('تم نسخ الرابط إلى الحافظة!');
+            });
+        }
+        
+        function copySourceCode() {
+            const htmlCode = document.documentElement.outerHTML;
+            navigator.clipboard.writeText(htmlCode).then(() => {
+                alert('تم نسخ كود المصدر إلى الحافظة!');
+            });
+        }
+        
+        function downloadAsPDF() {
+            alert('لتحميل الموقع كملف PDF:\n1. اضغط على Ctrl+P في المتصفح\n2. اختر "حفظ كـ PDF" كطابعة\n3. اضغط على "حفظ"');
+        }
+        
+        function showShareModal() {
+            document.getElementById('shareModal').style.display = 'flex';
+        }
+        
+        function hideShareModal() {
+            document.getElementById('shareModal').style.display = 'none';
+        }
+
+        // تهيئة التطبيق عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            createSidebar();
+            createPages();
+            setupSearch();
+            
+            // تحديث رابط الموقع في نافذة المشاركة
+            document.getElementById('siteLink').value = window.location.href;
+            
+            // إضافة بعض التأثيرات الإضافية
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // اختصار لوحة المفاتيح للتنقل بين الصفحات
+            document.addEventListener('keydown', function(e) {
+                const currentPage = document.querySelector('.page.active');
+                if (!currentPage) return;
+                
+                const currentPageId = parseInt(currentPage.id.split('-')[1]);
+                
+                if (e.key === 'ArrowRight' && currentPageId > 1) {
+                    showPage(currentPageId - 1);
+                } else if (e.key === 'ArrowLeft' && currentPageId < pages.length) {
+                    showPage(currentPageId + 1);
+                } else if (e.ctrlKey && e.key === 'f') {
+                    e.preventDefault();
+                    document.getElementById('searchInput').focus();
+                }
+            });
+            
+            // إغلاق نافذة المشاركة عند النقر خارجها
+            document.getElementById('shareModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    hideShareModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
